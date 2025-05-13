@@ -1,0 +1,81 @@
+h1 {
+  text-align: center;
+}
+p {
+  color: grey;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover {
+  color: orange;
+}
+
+.box {
+  background-color: lightgray;
+  padding: 20px;
+  border: 1px solid black;
+}
+.buttn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.containr {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  transition: box-shadow 0.4s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+table tr:nth-child(odd) {
+  background-color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: lightgrey;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.title {
+  font-size: 32px;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px;
+}
+
+nav a.active {
+  border-bottom: 2px solid blue;
+}
