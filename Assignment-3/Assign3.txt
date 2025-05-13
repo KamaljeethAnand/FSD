@@ -1,0 +1,19 @@
+Assignment 3: Personal Portfolio Webpage (Semantic + Performance + Multimedia)
+
+Task:
+
+Create a personal portfolio website using semantic HTML5 tags that is responsive and includes a video/audio section.
+
+Instructions:
+
+Use semantic tags: <header>, <nav>, <main>, <section>, <article>, <footer>
+
+Embed:
+
+A video introducing yourself or any (<video>)
+
+A background music/audio (<audio>)
+
+Add a <meta name="viewport"> tag for mobile responsiveness
+
+Use appropriate headings, links, and lists
