@@ -1,0 +1,21 @@
+Assignment 4: Smart Contact Form (New Form Controls + Semantic)
+
+Instructions:
+
+Create a contact form using only HTML5 with the following:
+
+<input type="text"> for Name
+
+<input type="email"> for Email
+
+<input type="date"> for Date of Birth
+
+<input type="range"> for Satisfaction Level (1–10)
+
+A <submit> button
+
+Include:
+
+A <section> tag to wrap your form
+
+Use the required attribute in at least one input field
