@@ -1,0 +1,14 @@
+Assignment 5: Feedback Page with Web Storage
+Concept Explanation
+
+Instructions:
+
+Create a simple HTML page with:
+
+A <form> that takes user's name and feedback
+
+A short paragraph explaining what localStorage and sessionStorage are,
+
+and where they are used (just text explanation — no JavaScript required)
+
+Wrap content using semantic tags like <article> and <aside>

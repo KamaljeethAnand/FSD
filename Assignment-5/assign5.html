@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Page with Web Storage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f8ff;
+    }
+    article, aside {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+    form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+    }
+    #display {
+      margin-top: 15px;
+      background-color: #e0ffe0;
+      padding: 10px;
+      border-left: 5px solid green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <article>
+    <h1>Feedback Form</h1>
+    <form id="feedbackForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="display">
+      <h3>Stored Feedback</h3>
+      <p><strong>Name:</strong> <span id="storedName"></span></p>
+      <p><strong>Feedback:</strong> <span id="storedFeedback"></span></p>
+    </div>
+  </article>
+
+  <aside>
+    <h2>About Web Storage</h2>
+    <p>
+      <strong>localStorage</strong> and <strong>sessionStorage</strong> are features of the Web Storage API that allow websites to store data in the browser.
+    </p>
+    <p>
+      <strong>localStorage</strong> stores data with no expiration date. It remains even after the browser is closed, making it suitable for saving user names, preferences, etc.
+    </p>
+    <p>
+      <strong>sessionStorage</strong> stores data only for the duration of the page session. It is cleared when the tab or window is closed, ideal for temporary data like feedback entries.
+    </p>
+  </aside>
+
+  <script>
+    // On form submission
+    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const feedback = document.getElementById('feedback').value;
+
+      // Store values
+      localStorage.setItem('userName', name);
+      sessionStorage.setItem('userFeedback', feedback);
+
+      // Display stored data
+      document.getElementById('storedName').textContent = localStorage.getItem('userName');
+      document.getElementById('storedFeedback').textContent = sessionStorage.getItem('userFeedback');
+      document.getElementById('display').style.display = 'block';
+
+      // Optional: clear form
+      document.getElementById('feedbackForm').reset();
+    });
+
+    // Auto-display if sessionStorage already has feedback
+    window.onload = function () {
+      const storedName = localStorage.getItem('userName');
+      const storedFeedback = sessionStorage.getItem('userFeedback');
+
+      if (storedName && storedFeedback) {
+        document.getElementById('storedName').textContent = storedName;
+        document.getElementById('storedFeedback').textContent = storedFeedback;
+        document.getElementById('display').style.display = 'block';
+      }
+    };
+  </script>
+
+</body>
+</html>
