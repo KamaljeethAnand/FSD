@@ -1,0 +1,14 @@
+Assignment 3: Personal Portfolio Webpage (Semantic + Performance + Multimedia)
+
+Task:
+
+Create document resume.htm to hold your resume and create an external style sheet called resume.css that defines formatting CSS
+
+Instructions:
+
+Background color
+Text color
+Font with italics and size
+define style for h1 and/or h2
+
+explore pseudo elements and classes and use in style sheet
