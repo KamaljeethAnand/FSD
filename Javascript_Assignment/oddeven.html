@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even</title>
+</head>
+<body>
+    <h2>Checking Even or Odd using if...else</h2>
+    <button onclick="checkOddEven()">Check</button>
+    <script>
+        function checkOddEven() {
+            let num = parseInt(prompt("Enter a number:"));
+            if (num % 2 === 0) {
+                document.write("<h3>" + num + " is an even number.</h3>");
+            } else {
+                document.write("<h3>" + num + " is an odd number.</h3>");
+            }
+        }
+        </script>
+</body>
+</html>
