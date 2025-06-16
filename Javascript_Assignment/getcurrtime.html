@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching current time and date</title>
+</head>
+<body>
+    <h2> Current Time and Date</h2>
+    <button onclick="getCurrentTime()">Get Current Time</button>   
+    <script>
+        function getCurrentTime() {
+        
+            const now = new Date();
+
+            const options = {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+
+            const formattedTime = now.toLocaleString('en-US', options);
+
+            alert("Current Time and Date: " + formattedTime);
+        }
+        </script>
+</body>
+</html>
